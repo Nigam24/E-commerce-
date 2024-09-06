@@ -1,0 +1,74 @@
+
+
+
+  
+  footer {
+    background-color:rgba(211, 211, 211, 0.27);
+    height: 4000px;
+    margin-top: 100px;
+  
+  }
+  
+  .newsletter {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 70%;
+    margin-left: 200px;
+    margin-top: -50px;
+    position: absolute;
+  }  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+  }
+  
+  .footer-section h3,
+  .footer-section h4 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .footer-section .social-icons a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  .payment-icons img {
+    width: 40px;
+    height: 25px;
+    margin: 0 5px;
+  }
+  
