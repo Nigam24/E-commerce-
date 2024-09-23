@@ -1,0 +1,46 @@
+.Shirtt{
+    margin-left: 2rem;
+    /* background-color:green; */
+    /* display: flex; */
+    flex-direction: column;
+    /* gap: 200px; */
+    /* height: 500px; */
+}
+.imggg{
+  width:110%;
+  height: 210px;
+  margin-left: 10px;
+  margin-top:140px;
+  padding: 10px;
+}
+.info{
+    color:black;
+    /* font-style:oblique; */
+    margin-left: 30px;
+    margin-top: -15px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bolder ;
+}
+/* .p8{
+    font-size: 25px;
+    margin: 920px;
+    position: absolute;
+    color:yellow;
+} 
+#ratii{
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: -20px;
+}
+#product{
+    margin-top: -15px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+} */
+
+/* #divv1{
+    display: flex !important;
+    gap: 20%;
+} */

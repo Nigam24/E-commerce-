@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar1 from "./Navbar1";
+import NewArrival from './NewArrival'
 
 function Brands() {
   return (
     <>
-    <Navbar1></Navbar1>
+    <NewArrival></NewArrival>
     </>
   )
 }

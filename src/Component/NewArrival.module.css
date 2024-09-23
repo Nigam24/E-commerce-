@@ -1,0 +1,63 @@
+
+.body2{
+  background-color:white;
+  margin-top: -65px;
+  height: 570px;
+  /* display: flex; */
+}
+.new3{
+  font-size: 60px;
+  margin-top: 30px;
+  margin-left: 350px;
+  font-weight: bolder;
+  /* color: blue; */
+  position: absolute;
+}
+.proList{
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+  position: absolute;
+  margin-left: 40px;
+  width: 80%;
+}
+/* #divv23{
+  display: flex;
+  margin-left: -50px;
+  height: 30px;
+  width: 20px;
+  position:relative;
+} */
+/* #arrivalls{
+  color: blue;
+  margin-left: -30px;
+  position: absolute;
+} */
+/* .view1 {
+  margin-top:50px;
+  margin-left: -40px;
+  padding: 10px 20px;
+  width: 15%;
+  font-size: 1em;
+  border: none;
+  border-radius: 20px;
+  background-color:yellow;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.182);
+  cursor: pointer;
+} */
+/* .view3{
+  margin-top:20px;
+  margin-left: -40px;
+  padding: 10px 20px;
+  width: 15%;
+  font-size: 1em;
+  border: none;
+  border-radius: 20px;
+  background-color:white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.182);
+  cursor: pointer;
+}
+.view3:hover {
+  background-color: rgba(209, 39, 39, 0.481);
+} */
+

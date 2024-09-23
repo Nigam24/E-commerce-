@@ -1,89 +1,213 @@
-import React from "react";
+ import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./cart.css";
-import Navbar1 from "../Component/Navbar1";
-import { useState, useEffect } from "react";
-function Onsale() {
-  const [count, setCount] = useState(0);
+import OrderSuccess from "../Component/OrderSuccess.jsx";
+// import { TailSpin } from "react-loader-spinner";
+import { useFetch } from "../hooks/useFetch.js";
+import { deleteData, postData, putData } from "../utils/apiCall.js";
+import Navbar1 from "../Component/Navbar1.jsx";
 
-  useState(() => {
-    console.log("Count updated:", count);
-  }, [count]); // Only runs when 'count' changes
+function Cart() {
+
+  
+  const [cartItems, setCartItems] = useState();
+  const [showOrder, setShowOrder] = useState(false);
+  // const [loading, setLoading] = useState(true)
+  const navigate = useNavigate();
+  const discountRate = 0.2;
+  const deliveryFee = 15;
+
+
+
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      navigate("/cart1");
+    }
+  }, [navigate]);
+
+  const { data, error } = useFetch(`/add/cart`);
+
+  useEffect(() => {
+    setCartItems(data);
+  }, [data]);
+
+  console.log(cartItems);
+
+  const handleIncrement = async (id) => {
+    try {
+      //console.log(product_id);
+      const result = await putData("/add/cart", {
+        productId: id
+      });
+
+      if (result) {
+        setCartItems(
+          cartItems.map((item) =>
+            item.product_id === id
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
+          )
+        );
+      }
+    } catch (error) {
+      console.error("Failed to increment item quantity", error);
+    }
+  };
+
+  const handleDecrement = async (id) => {
+    try {
+      await putData("/decrease?productId=" + id);
+      setCartItems(
+        cartItems.map((item) =>
+          item.product_id === id && item.quantity > 1
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+      );
+    } catch (error) {
+      console.error("Failed to decrement item quantity", error);
+    }
+  };
+
+  const handleRemove = async (id) => {
+    try {
+      await deleteData("/add/cart?productId=" + id);
+      setCartItems(cartItems.filter((item) => item.product_id !== id));
+    } catch (error) {
+      console.error("Failed to remove item", error);
+    }
+  };
+
+  const calculateSubtotal = () => {
+    return cartItems
+      .reduce(
+        (acc, item) => acc + parseFloat(item.price) * parseFloat(item.quantity),
+        0
+      )
+      .toFixed(2);
+  };
+
+// Discount calculation: Ensures the discount is applied on the valid subtotal
+const calculateDiscount = () => {
+  const subtotal = parseFloat(calculateSubtotal());
+  if (subtotal <= 0) return 0;
+
+  return (subtotal * discountRate).toFixed(2);
+};
+
+// Total calculation: Ensures proper addition and valid delivery fee handling
+const calculateTotal = () => {
+  const subtotal = parseFloat(calculateSubtotal());
+  const discount = parseFloat(calculateDiscount());
+  const validDeliveryFee = deliveryFee > 0 ? deliveryFee : 0;
+
+  return (subtotal - discount + validDeliveryFee).toFixed(2);
+};
+
+  const handleset = () => {
+    postData("/order/create", {
+      items: cartItems,
+      subtotal: calculateSubtotal(),
+      discount: calculateDiscount(),
+      deliveryFee,
+      total: calculateTotal(),
+    });
+  };
+
   return (
     <>
-      <Navbar1></Navbar1>
-      {/* <div class="breadcrumb">
-        <a href="#">Home</a> &gt; <a href="#">Shop</a> &gt; <a href="#">Men</a> &gt; <a href="#">T-shirts</a>
-    </div> */}
-      <div id="orr"></div>
-      <div className="link cart">
-        <h4 id="is">Home > Shop > Men > T-shirt</h4>
-      </div>
-      <div className="cart img">
-        <img id="ys" src="/images/pic2.png"></img>
-      </div>
-      <div className="ttt">
-        <img id="yss" src="/images/pic2.png" />
-      </div>
-      <div className="wer">
-        <img id="op" src="/images/pic3.png" />
-      </div>
-      <div className="ii">
-        <img id="ops" src="/images/pic4.png" />
-      </div>
-      <h1 id="yy0">
-        <b>ONE LIFE GRAPHIC T-SHIRT</b>
-      </h1>
-      <img id="ot" src="/images/star.png" />
-      <div class="price">
-        <span class="current-price">$260</span>
-        <span class="original-price">$300</span>
-        <span class="discount">-40%</span>
-      </div>
-      <h6 id="oo2">
-        This graphic t-shirt which is perfect for any occasion.Crafted from a
-        soft and
-      </h6>
-      <h6 id="tx">breathable fabric.it offers superior comfort and style.</h6>
-      <div id="ttk"></div>
-      <span id="rrp">Select Colors</span>
-      <div className="colors">
-        <div className="color brown"></div>
-        <div className="color green"></div>
-        <div className="color navy"></div>
-      </div>
-      <div id="tte"></div>
-      <div className="select-size">
-        <span id="ttp">Choose Size</span>
-        <div className="sizes">
-          <button>Small</button>
-          <button>Medium</button>
-          <button class="selected">Large</button>
-          <button>X-Large</button>
-        </div>
-      </div>
-      <div id="eet"></div>
-      <div className="calculate">
-        <p id="ke">{count}</p>
-        <button id="e6" onClick={() => setCount(count + 1)}>
-          +
-        </button>
-        <button id="ee6" onClick={() => setCount(count - 1)}>
-          -
-        </button>
-      </div>
-      <button id="add1">Add to Cart</button>
-      <h1 id="ff">Product Details</h1>
-      <div id="tre"></div>
-      <p id="w2w">
-        Sleek and timeless. Titanium glasses with innovative bridge.A frame to
-        suit every face, Morgan is a classic panto shape. Named after James
-        Morgan, the engineer who built the Ragent's canal, it features custom
-        elements including fluid single piece bridge, adjustable nose pads and
-        temple tips based on constantin.
-      </p>
-      <p id="ww">Brancusi Bird in space.</p>
+     {/* <TailSpin
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+        /> */}
+    <Navbar1></Navbar1>
+      {console.log(cartItems)}
+{showOrder ? (
+        <OrderSuccess />
+      ) : (
+        cartItems && (
+          <div className="shopping-cart">
+            <div className="cart-items"> 
+              <h2>Your Cart</h2>
+              {cartItems.map((item) => (
+                <div key={item.product_id} className="cart-item">
+                  <img
+                    src={`data:${item.image.fileType};base64,${item.image.fileContent}`}
+                    alt={item.name}
+                    className="item-image"
+                  />
+                  <div className="item-details">
+                    <h4>{item.title}</h4>
+                    <p>Size: {item.size}</p>
+                    <p>Color: {item.color}</p>
+                    <h3>
+                      <p>${item.price}</p>
+                    </h3>
+                  </div>
+                  <div className="item-controls">
+                    <button onClick={() => handleDecrement(item.product_id)}>
+                      -
+                    </button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => handleIncrement(item.product_id)}>
+                      +
+                    </button>
+                  </div>
+                  <button
+                    onClick={() => handleRemove(item.product_id)}
+                    className="remove-item"
+                  >
+                    🗑
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            <div className="order-summary">
+              <h3>Order Summary</h3>
+              <p>
+                Subtotal: <span>${calculateSubtotal()}</span>
+              </p>
+              <p id="discount">
+                Discount (-{discountRate * 100}%):{" "}
+                <span>-${calculateDiscount()}</span>
+              </p>
+              <p>
+                Delivery Fee: <span>${deliveryFee}</span>
+              </p>
+              <h4>
+                Total: <span id="total">${calculateTotal()}</span>
+              </h4>
+
+              <input
+                type="text"
+                placeholder="Add promo code"
+                className="promo-code-input"
+              />
+              <button className="apply-promo-button">Apply</button>
+              <button
+                className="checkout-button"
+                onClick={() => {
+                  setShowOrder(true);
+                  handleset()
+                  
+                }}
+              >
+                Order
+              </button>
+            </div>
+          </div>
+        )
+      )}
     </>
+  
   );
 }
 
-export default Onsale;
+export default Cart;

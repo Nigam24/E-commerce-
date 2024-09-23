@@ -15,6 +15,10 @@ import Dresss from "./Component/Dresss";
 // import { Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ProductCard from "./Pages/Productcard";
+import OrderSuccess from "./Component/OrderSuccess";
+
+// import Loader from "./Component/Loader";
 
 
 function App() {
@@ -26,13 +30,14 @@ function App() {
           <Route path="/" element={<Home />}/>
             <Route path="/Shop" element={<Shop />} />
             <Route path="Onsale" element={<Onsale />} />
-            <Route path="NewArrival" element={<NewArrival />} />
+            <Route path="/NewArrival" element={<NewArrival />} />
             <Route path="Brands" element={<Brands />} />
             <Route path="Cart1" element={<Cart1 />} />
             <Route path="Login" element={<Login/>}/>
             <Route path="Signup" element={<Signup/>}/>
             <Route path="Dresss" element={<Dresss/>}/>
-            
+            <Route path="OrderSuccess" element={<OrderSuccess/>}/>
+            <Route path="/Productcard/:productId" element={<ProductCard/>}/>
           <Route/>
         </Routes>
       </Router>

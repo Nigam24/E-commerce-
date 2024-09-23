@@ -1,258 +1,101 @@
-#orr {
-    height: 2px;
-    width: 97%;
-    background-color: lightgray;
-    margin-left: 17px;
-    margin-top: 15px;
-    position: absolute;
-  }
-  
-  #is {
-    margin-left: 40px;
-    color: lightgray; 
-    margin-top: 40px;
-    position: absolute;
-  }
-  #ys {
-    height: 150px;
-    width: 130px;
-    margin-left: 25px;
-    margin-top: 70px;
-    border-radius: 20px;
-    border-style: solid;
-  }
-  #yss {
-    height: 150px;
-    width: 130px;
-    margin-left: 30px;
-    margin-top: 10px;
-    border-radius: 20px;
-    position: absolute;
-  }
-  #op {
-    height: 140px;
-    width: 140px;
-    margin-left: 30px;
-    margin-top: 170px;
-    border-radius: 20px;
-    position: absolute;
-  }
-  #ops {
-    display: flex;
-    height: 500px;
-    width: 430px;
-    margin-left: 190px;
-    margin-top: -160px;
-    border-radius: 20px;
-    position: absolute;
-  }
-  #yy0 {
-    margin-left: 640px;
-    margin-top: -160px;
-    font-weight: bolder;
-    font-size: 43px;
-  }
-  #ot {
-    height: 30px;
-    width: 190px;
-    margin-left: 640px;
-    margin-top: -20px;
-    position: absolute;
-  }
-  .price {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 50px;
-    margin-left: 640px;
-    font-size: 30px;
-  }
-  .original-price {
-    text-decoration: line-through;
-  }
-  #oo2 {
-    font-size: 16px;
-    margin-left: 640px;
-    margin-top: 20px;
-    color: dimgrey;
-  }
-  #tx {
-    font-size: 16px;
-    margin-left: 643px;
-    margin-top: -30px;
-    position: absolute;
-    color: dimgrey;
-  }
-  #ttk {
-    height: 2px;
-    width: 47%;
-    background-color: lightgray;
-    margin-left: 641px;
-    margin-top: 15px;
-    position: relative;
-  }
-  #rrp {
-    margin-left: 645px;
-    margin-top: 20px;
-    font-size: 19px;
-    color: dimgrey;
-    position: absolute;
-  }
-  /* .select-colors,
-    .select-size {
-      margin-top: 70px;
-      margin-left: 650px;
-  } */
-  .colors {
-    margin-top: 30px;
-    margin-left: 649px;
-  }
-  
-  .colors,
-  .sizes {
-    display: flex;
-    gap: 10px;
-    margin-top: 70px;
-  }
-  
-  .color {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid #000;
-    cursor: pointer;
-  }
-  
-  .color.brown {
-    background-color: #5b4d41;
-  }
-  .color.green {
-    background-color: #2b3a1d;
-  }
-  .color.navy {
-    background-color: #192231;
-  }
-  #tte {
-    height: 2px;
-    width: 47%;
-    background-color: lightgray;
-    margin-left: 641px;
-    margin-top: 15px;
-    position: relative;
-  }
-  #ttp {
-    margin-left: 645px;
-    margin-top: -50px;
-    font-size: 19px;
-    color: dimgrey;
-    position: absolute;
-  }
-  .sizes button {
-      /* padding: 10px; */
-      height: 40px;
-      width: 90px;
-      border: 1px solid #000;
-      background-color:rgba(105, 105, 105, 0.205);
-      cursor: pointer;
-      border-radius: 20px;
-      margin-top: -10px;
-  }
-  .sizes{
-      margin-left: 645px;
-  }
-  
-  .sizes .selected {
-      background: #000;
-      color: #fff;
-  }
-  #eet{
-      height: 2px;
-      width: 47%;
-      background-color:lightgray;
-      margin-left: 641px;
-      margin-top: 15px;
-      position: relative;
-    }
-  /* #add{
-      background-color: black;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      padding: 10px 190px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 30px;
-      margin-left: 700px;
-      transition: background-color 0.3s;
-  } */
-  
-  /* .add-to-cart:hover {
-      background-color: #333;
-  } */
-  .calculate{
-    background-color:lightgray;
-    height: 40px;
-    width: 150px;
-    margin-top: 20px;
-    margin-left: 650px;
-    border-radius: 30px;
-  }
-  #ke{
-    margin-left: 60px;
-    margin-top: 10px;
-    position: absolute;
-    font-size: 20px;
-  }
-  #e6{
-    background-color: lightgray;
-    margin-left: 20px;
-    border: 0cap;
-    font-size:25px;
-    margin-top: 5px;
-    position: absolute;
-  }
-  #ee6{ 
-    background-color: lightgray;
-    margin-left: 90px;
-    margin-top: 1px;
-    width: 10px;
-    border: 0cap;
-    font-size:30px;
-    position: absolute;
-  }
-  #add1{
-    margin-left: 820px;
-    margin-top: -40px;
-    height:40px;
-    width: 400px;
-    color:white;
-    background-color: black;
-    border-radius: 30px;
-    position: absolute;
-  }
-  #add1:hover{
-    color: aqua;
-  }
-  #ff{
-    margin-top: 50px;
-    margin-left: 30px;
-    font-size: 30px;
-  }
-  #tre{
-    height: 2px;
-    width: 1190px;
-    background-color:black;
-    margin-left:20px;
-    margin-top: 15px;
-    position: relative;
-  }
-  #w2w{
-    margin-top:20px ;
-    margin-left: 20px;
-    font-size: 25px;
-  }
-  #ww{
-    margin: -20px;
-    margin-left: 20px;
-    font-size: 25px;
-  }  
+.shopping-cart { 
+  display: flex; 
+  justify-content: space-between; 
+  padding: 20px; 
+} 
+ 
+.cart-items { 
+  width: 60%; 
+} 
+ 
+.cart-item { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  margin-bottom: 20px; 
+  padding: 10px; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+} 
+ 
+.item-image { 
+  width: 80px; 
+  height: 80px; 
+  object-fit: cover; 
+  border-radius: 5px; 
+} 
+ 
+.item-details { 
+  flex: 1; 
+  margin-left: 20px; 
+} 
+ 
+.item-controls { 
+  display: flex; 
+  align-items: center; 
+} 
+ 
+.item-controls button { 
+  background-color: #f0f0f0; 
+  border: none; 
+  padding: 5px 10px; 
+  margin: 0 5px; 
+  cursor: pointer; 
+} 
+ 
+.remove-item { 
+  background-color: transparent; 
+  border: none; 
+  color: red; 
+  cursor: pointer; 
+  font-size: 20px; 
+} 
+ 
+.order-summary { 
+  width: 30%; 
+  border: 1px solid #ddd; 
+  padding: 20px; 
+  border-radius: 5px; 
+} 
+ 
+.order-summary h3, 
+.order-summary h4 { 
+  margin-bottom: 20px; 
+} 
+ 
+.order-summary p { 
+  display: flex; 
+  justify-content: space-between; 
+  margin: 10px 0; 
+} 
+ 
+.promo-code-input { 
+  width: 100%; 
+  padding: 10px; 
+  margin-bottom: 20px; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+} 
+ 
+.apply-promo-button, 
+.checkout-button { 
+  width: 100%; 
+  padding: 10px; 
+  border: none; 
+  background-color: black; 
+  color: white; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  margin-bottom: 10px; 
+} 
+ 
+.checkout-button { 
+  background-color: #000; 
+} 
+#discount { 
+  color: red; 
+} 
+#total { 
+  margin-left: 260px; 
+  position: absolute; 
+}

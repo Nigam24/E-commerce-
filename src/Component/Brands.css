@@ -1,0 +1,318 @@
+#casual{
+    margin-left: 100px;
+    top: 20px;
+    color:white;
+ 
+
+    /* position: absolute; */
+}
+.clothes1{
+    position: relative;
+    display: flex;
+    margin-left: 40px;
+   }
+   .t-shirt1 img{
+    height: 380px;
+    width: 380px;
+    margin-left: 12px;
+    
+   }
+   .clothes2{
+    position: relative;
+    display: flex;
+    margin-left: 40px;
+    margin-top: 30px;
+   }
+   .t-shirt2 img{
+    height: 380px;
+    width: 380px;
+    margin-left: 12px;
+    
+   }
+   .clothes3{
+    position: relative;
+    display: flex;
+    margin-left: 40px;
+    margin-top: 30px;
+   }
+   .t-shirt3 img{
+    height: 380px;
+    width: 380px;
+    margin-left: 12px;
+    
+   }
+   .new15{
+    border: 1px solid rgb(222, 218, 218);
+      width:1157px;
+      margin-top: 25px;
+      margin-left: 50px;
+   }
+   #previous{
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 20px;
+    background-color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 7px;
+    border: 1.5px solid rgb(222, 218, 218);
+    font-weight: bold;
+    font-size: 15px;
+
+   }
+   #leftimg{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 60px;
+    height: 20px;
+   }
+   #next{
+    margin-left: 1030px;
+    position: absolute;
+    margin-top: 20px;
+    background-color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 7px;
+    border: 1.5px solid rgb(222, 218, 218);
+    font-weight: bold;
+    font-size: 15px;
+
+   }
+   #rightimg{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 1130px;
+    height: 20px;
+   }
+   /* upto date */
+   .stay10{
+    height: 160px;
+    width: 1165px;
+    background-color:black;
+    margin-left: 50px;
+    margin-top: 130px;
+    border-radius: 22px;
+    position: relative;
+    color: white;
+    font-weight: bolder;
+  }
+  #stay1{
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 30px;
+    font-size: 40px;
+  }
+  #stay2{
+    margin-left: 40px;
+    margin-top: 80px;
+    position: absolute;
+    font-size: 40px;
+  }
+  #inp{
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 30px;
+    height: 35px;
+    width: 330px;
+    border-radius: 25px;
+    border: none;
+  }
+  #email{
+  position: absolute;
+    height: 20px;
+    width: 20px;
+    margin-top: 40px;
+    margin-left: 770px;
+  
+  }
+  #inp1{
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 80px;
+    height: 35px;
+    width: 330px;
+    border-radius: 25px;
+    border: none;
+  }
+  .lastdiv{
+    height: 480px;
+    width: 100%;
+    background-color:#f0f0f0;
+    margin-top: -85px;
+  }
+  #shop1{
+    font-weight: bold;
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 50px;
+    font-size: 45px;
+  
+  }
+  #lastp{
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 50px;
+    color: rgb(113, 112, 112);
+    font-size: 15px;
+  }
+  #lastp1{
+    position: absolute;
+    margin-top: 230px;
+    margin-left: 50px;
+    color: rgb(113, 112, 112);
+    font-size: 15px;
+  }
+  #lastp2{
+    position: absolute;
+    margin-top: 255px;
+    margin-left: 50px;
+    color: rgb(113, 112, 112);
+    font-size: 15px;
+  }
+  #ls{
+    height: 40px;
+    width: 180px;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 310px;
+  }
+  #lh2{
+    position: absolute;
+  margin-left: 380px;
+  margin-top: 150px;
+  
+  }
+  #llp{
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 380px;
+    color: rgb(113, 112, 112);
+  }
+  #llp1{
+    position: absolute;
+    margin-top: 245px;
+    margin-left: 380px;
+    color: rgb(113, 112, 112);
+  }
+  #llp2{
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 380px;
+    color: rgb(113, 112, 112);
+  }
+  #llp3{
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 380px;
+    color: rgb(113, 112, 112);
+  }
+  
+  #lh3{
+  position: absolute;
+  margin-left: 590px;
+  margin-top: 150px;
+  
+  }
+  #l1{
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 590px;
+    color: rgb(113, 112, 112);
+  }
+  #l2{
+    position: absolute;
+    margin-top: 245px;
+    margin-left: 590px;
+    color: rgb(113, 112, 112);
+  }
+  #l3{
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 590px;
+    color: rgb(113, 112, 112);
+  }
+  #l4{
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 590px;
+    color: rgb(113, 112, 112);
+  }
+  #lh4{
+  position: absolute;
+  margin-left: 790px;
+  margin-top: 150px;
+  }
+  #cs{
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 790px;
+    color: rgb(113, 112, 112); 
+  }
+  #cs1{
+    position: absolute;
+    margin-top: 245px;
+    margin-left: 790px;
+    color: rgb(113, 112, 112); 
+  }
+  #cs2{
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 790px;
+    color: rgb(113, 112, 112); 
+  }
+  #cs3{
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 790px;
+    color: rgb(113, 112, 112); 
+  }
+  #lh5{
+    position: absolute;
+    margin-left: 990px;
+    margin-top: 150px;
+    }
+    #Fb{
+      position: absolute;
+      margin-top: 205px;
+    margin-left: 990px;
+    color: rgb(113, 112, 112); 
+    }
+    #Fb1{
+      position: absolute;
+      margin-top: 245px;
+    margin-left: 990px;
+    color: rgb(113, 112, 112); 
+    }
+    #Fb2{
+      position: absolute;
+      margin-top: 280px;
+    margin-left: 990px;
+    color: rgb(113, 112, 112); 
+    }
+    #Fb3{
+      position: absolute;
+      margin-top: 320px;
+    margin-left: 990px;
+    color: rgb(113, 112, 112); 
+    }
+  .new6{
+    border: 1px solid #a3a1a1;
+        width:1157px;
+        margin-top: 390px;
+        margin-left: 50px;
+        position: absolute;
+  }
+  #Fb4{
+    color: rgb(113, 112, 112); 
+    position: absolute;
+    margin-top: 420px;
+    margin-left: 50px;
+  }
+  #ms{
+    position: absolute;
+    height: 40px;
+    width: 290px;
+    margin-top: 410px;
+    margin-left: 870px;
+  }

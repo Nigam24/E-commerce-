@@ -37,11 +37,21 @@ function Login() {
       })
       .then((data) => {
         console.log(data);
-        if(data.jwtToken && data.success){
+        // if(data.jwtToken && data.success){
+        //   localStorage.setItem("token", data.jwtToken);
+        //   toast.success("Login Successfull");
+        //   navigate("/");
+        // } 
+        if (data.jwtToken && data.success) {
           localStorage.setItem("token", data.jwtToken);
-          toast.success("Login Successfull");
+          toast.success("Login Successful");
           navigate("/");
-        } 
+        } else {
+          // Add an alert message if the user does not exist or if the login fails
+          toast.error("User does not exist or login failed. Please check That Your login or not.");
+        }
+        
+      
         localStorage.setItem("token", data.jwtToken);
         console.log(data);
       });
@@ -69,14 +79,14 @@ function Login() {
       <div id="or"></div>
       <h2 id="r2">or</h2>
       <div id="or1"></div>
-      <h2 id="r3">User name or email address</h2>
+      <h2 id="r3">Email Address</h2>
       <input type="text"id="username"name="username"required onChange={handleUserChange}/>
       <h1 id="y3">Password</h1>
       <br />
       <input id="z2"type="text"required onChange={handlePasswordChange}></input>
-      <h2 id="y4">
+      {/* <h2 id="y4">
         <u>Forget The Password</u>
-      </h2>
+      </h2> */}
       <button id="but3" onClick={handleSignin}>
         Sign In
       </button>

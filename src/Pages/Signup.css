@@ -8,10 +8,10 @@
   }
   #but1 {
     height: 35px;
-    width: 95px;
-    margin-left: 980px;
+    width:95px;
+    margin-left: 200px;
     margin-top: -665px;
-    background-color: black;
+    background-color: rgb(198, 7, 7);
     color: white;
     position: absolute;
     border-radius: 5px;

@@ -4,6 +4,8 @@ import Banner from '../Component/Banner'
  import NewArrival from '../Component/NewArrival'
 import Onsale from '../Component/Onsale'
 import Dress from '../Component/Dresss'
+
+
 function Home() {
   return (
     <>
@@ -12,6 +14,8 @@ function Home() {
     <NewArrival></NewArrival>
     <Onsale></Onsale>
     <Dress></Dress>
+
+
     </>
   )
 }
