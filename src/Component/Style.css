@@ -53,6 +53,14 @@ body {
   margin-top: -5px;
   position: absolute;
   margin-left: 10px;
+  font-size: 25px;
+}
+#user{
+  height: 40px;
+  margin-top: 25px;
+  position: absolute;
+  margin-left: 30px;
+  font-size: 25px;
 }
 #y1 {
   height: 200px;
