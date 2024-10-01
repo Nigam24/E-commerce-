@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import './Dress.css'
 import { useNavigate } from "react-router-dom";
-import NewArrival from './Onsale';
+import Card from "./Card";
+// import NewArrival from './Onsale';
 function Dresss() {
   const navigate = useNavigate();
-  function handleClick() {
-    navigate(NewArrival);
+  
+  function handleClick(productId) {
+    navigate(`/Productcard/${productId}`);
   }
+  const [arrivals, setArrivals] = useState([]);
+  useEffect(() => {
+    console.log("top selling is coming");
+    fetch("http://localhost:4000/products/getproduct?tag=topSelling")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.products);
+        setArrivals(data.products);
+      });
+  }, []);
+
   return (
     <>
     <div className='body4'>
@@ -14,7 +27,7 @@ function Dresss() {
         <h1>BROWSE BY DRESS STYLE</h1>
         <div class="grid">
           <div class="card">
-            <img id="w1" src="/images/casual.png" alt="Casual" onClick={handleClick} />
+            <img id="w1" src="/images/casual.png" alt="Casual"/>
             
           </div>
           <div class="cards">
@@ -25,6 +38,11 @@ function Dresss() {
             <img id="w3" src="/images/party.png" alt="Party" />
             
           </div>
+          {/* <div className="productlist">
+        {arrivals && arrivals.map((product, index) => (
+          <Card key={index} handleClick={handleClick} product={product} />
+        ))}
+      </div> */}
           <div class="two">
             <img id="w4" src="/images/gym.png" alt="Gym" />
           
