@@ -1,0 +1,102 @@
+.footer {
+    background-color: #f4f4f4;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .newsletter {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 1%;
+    height: 180px;
+    /* padding: 40px; */
+  }
+  
+  .newsletter h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .newsletterInput {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .newsletterInput input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+  }
+  
+  .newsletterInput button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .footerBrand {
+    max-width: 300px;
+  }
+  
+  .footerBrand h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .footerBrand p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footerLinks {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .footerLinks h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footerLinks ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footerLinks li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .footerBottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-size: 12px;
+  }
+  
+  .paymentMethods img {
+    width: 260px;
+    margin-left: 10px;
+  }
+  
